@@ -27,19 +27,19 @@ https://github.com/p870613/st_nycu_lab4_309551042
     ![](https://i.imgur.com/V1Wc5BW.png)
 
 - test case
-    - p1 win and p2 lose
-        ![](https://i.imgur.com/cuETYF5.png)
+    - p1 win and p2 lose <br/>
+    ![](https://i.imgur.com/cuETYF5.png)
 
-    - p1 lose and p2 win
-        ![](https://i.imgur.com/Qy0n4GO.png)
+    - p1 lose and p2 win <br/>
+    ![](https://i.imgur.com/Qy0n4GO.png)
 
     - p1 and p2 draw
-        ![](https://i.imgur.com/HxwFmQZ.png)
+    ![](https://i.imgur.com/HxwFmQZ.png)
     - input
         - valid input
-            ![](https://i.imgur.com/9L7NZB4.png)
+        ![](https://i.imgur.com/9L7NZB4.png)
         - invalid input
-            ![](https://i.imgur.com/TrzN4UY.png)
+        ![](https://i.imgur.com/TrzN4UY.png)
 
 ## part3
 
