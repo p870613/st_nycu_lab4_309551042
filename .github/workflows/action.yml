@@ -61,5 +61,5 @@ jobs:
       - name: store assemble file
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ steps.get_artifact_jar_name.outputs.jar_name }}
+          name: ${{ steps.get_artifact_jarname.outputs.jar_name }}
           path: build/libs/
