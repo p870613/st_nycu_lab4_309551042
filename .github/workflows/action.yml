@@ -49,15 +49,15 @@ jobs:
       artifact_jar_name: ${{ steps.get_artifact_jarname.outputs.jar_name }}
 
     steps:
-      - id: get_jarname
-        run: echo "::set-output name=jar_name::$(find ./build/libs -name '*.jar' -exec basename {} \;)"
-      - id: get_artifact_jarname
-        run: echo "::set-output name=jar_name::buildJar"
       - uses: actions/checkout@v2
       - name: permission for gradlew
         run: chmod +x gradlew
       - name: Assemble
         run: make assemble
+      - id: get_jarname
+        run: echo "::set-output name=jar_name::$(find ./build/libs -name '*.jar' -exec basename {} \;)"
+      - id: get_artifact_jarname
+        run: echo "::set-output name=jar_name::buildJar"
       - name: store assemble file
         uses: actions/upload-artifact@v2
         with:
