@@ -45,12 +45,12 @@ https://github.com/p870613/st_nycu_lab4_309551042
         ![](https://i.imgur.com/TrzN4UY.png)
 
 ## part3
-- Makefile
+- Makefile <br/>
     ![](https://i.imgur.com/L46HYRQ.png)
 
     
-- push and pull
-    - 都使用branch `master`
+- push and pull 
+    - 都使用branch `master` <br/>
     ![](https://i.imgur.com/AI1HKCV.png)
 - job
     - compile
@@ -115,7 +115,7 @@ https://github.com/p870613/st_nycu_lab4_309551042
     - `softprops/action-gh-release@v1`: 之後就release了
         - `steps.getReleaseName.outputs.RELEASE_NAME`: 抓tag的name
         - `needs.assemble.outputs.jar_name`:檔名
-        - 就release了
+        - 就release了 <br/>
             ![](https://i.imgur.com/9pG5Tai.png)
 
     ![](https://i.imgur.com/pOp3Avu.png)
