@@ -44,6 +44,10 @@ jobs:
     name: Assemble
     needs: test
     runs-on: ubuntu-latest
+    outputs:
+      jar_name: ${{ steps.get_jarname.outputs.jar_name }}
+      artifact_jar_name: ${{ steps.get_artifact_jarname.outputs.jar_name }}
+
     steps:
       - uses: actions/checkout@v2
       - name: permission for gradlew
@@ -53,5 +57,9 @@ jobs:
       - name: store assemble file
         uses: actions/upload-artifact@v2
         with:
-          name: buildJar
+          name: ${{ steps.get_artifact_jar_name.outputs.jar_name }}
           path: build/libs/
+      - id: get_jarname
+      run: echo "::set-output name=jar_name::$(find ./ | grep  ./build/libs/*.jar | xargs -L 1 basename)"
+      - id: get_artifact_jarname
+      run: echo "::set-output name=jar_name::buildJar"
