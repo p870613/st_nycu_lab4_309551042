@@ -37,10 +37,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Compile with Gradle
-      run: |
-        ./gradlew compileJava
-        ./gradlew processResources
-        ./gradlew classes
+      run: make compile
   test:
     name: Test
     needs: compile
@@ -50,11 +47,7 @@ jobs:
       - name: permission for gradlew
         run: chmod +x gradlew
       - name: test
-        run: |
-          ./gradlew compileTestJava
-          ./gradlew processTestResources
-          ./gradlew testClasses
-          ./gradlew test
+        run: make test
       - name: report
         uses: actions/upload-artifact@v2
         with:
@@ -69,9 +62,7 @@ jobs:
       - name: permission for gradlew
         run: chmod +x gradlew
       - name: Assemble
-        run: |
-          ./gradlew jar
-          ./gradlew assemble
+        run: make assemble
       - name: store assemble file
         uses: actions/upload-artifact@v2
         with:
