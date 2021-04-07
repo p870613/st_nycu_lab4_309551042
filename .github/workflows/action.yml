@@ -41,3 +41,39 @@ jobs:
         ./gradlew compileJava
         ./gradlew processResources
         ./gradlew classes
+  test:
+    name: Test
+    needs: compile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: permission for gradlew
+        run: chmod +x gradlew
+      - name: test
+        run: |
+          ./gradlew compileTestJava
+          ./gradlew processTestResources
+          ./gradlew testClasses
+          ./gradlew test
+      - name: report
+        uses: actions/upload-artifact@v2
+        with:
+          name: testreport
+          path: build/reports
+  assemble:
+    name: Assemble
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: permission for gradlew
+        run: chmod +x gradlew
+      - name: Assemble
+        run: |
+          ./gradlew jar
+          ./gradlew assemble
+      - name: store assemble file
+        uses: actions/upload-artifact@v2
+        with:
+          name: buildJar
+          path: build/libs/
