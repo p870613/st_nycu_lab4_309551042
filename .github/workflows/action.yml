@@ -60,6 +60,6 @@ jobs:
           name: ${{ steps.get_artifact_jar_name.outputs.jar_name }}
           path: build/libs/
       - id: get_jarname
-      run: echo "::set-output name=jar_name::$(find ./ | grep  ./build/libs/*.jar | xargs -L 1 basename)"
+        run: echo "::set-output name=jar_name::$(find ./build/libs -name '*.jar' -exec basename {} \;)"
       - id: get_artifact_jarname
-      run: echo "::set-output name=jar_name::buildJar"
+        run: echo "::set-output name=jar_name::buildJar"
