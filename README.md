@@ -23,8 +23,8 @@ https://github.com/p870613/st_nycu_lab4_309551042
         - 就一個個把邏輯寫出來而已
         ![](https://i.imgur.com/PqCHVpe.png) 
 ## part2
-- 先創3個`Stream<Arguments>` 分別可以導致`p1 win and p2 lose`, `p1 lose and p2 win`, `p1 and p2 draw`
-    ![](https://i.imgur.com/V1Wc5BW.png)
+- 先創3個`Stream<Arguments>` 分別可以導致`p1 win and p2 lose`, `p1 lose and p2 win`, `p1 and p2 draw` <br/>
+![](https://i.imgur.com/V1Wc5BW.png)
 
 - test case
     - p1 win and p2 lose <br/>
@@ -33,12 +33,12 @@ https://github.com/p870613/st_nycu_lab4_309551042
     - p1 lose and p2 win <br/>
     ![](https://i.imgur.com/Qy0n4GO.png)
 
-    - p1 and p2 draw
+    - p1 and p2 draw <br/>
     ![](https://i.imgur.com/HxwFmQZ.png)
     - input
-        - valid input
+        - valid input <br/>
         ![](https://i.imgur.com/9L7NZB4.png)
-        - invalid input
+        - invalid input <br/>
         ![](https://i.imgur.com/TrzN4UY.png)
 
 ## part3
